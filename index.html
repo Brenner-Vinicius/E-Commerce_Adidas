@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Loja Adidas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="logo-container">
+      <a href="#home" id="home-link">
+        <img src="./img/Logo.png" alt="Adidas Logo" class="logo-img">
+        <span class="logo-text">ADIDAS</span>
+      </a>
+    </div>
+    <nav class="main-nav">
+      <a href="#home">Início</a>
+      <a id="nav-produtos" href="#produtos-section">Produtos</a>
+      <a href="#footer">Contato</a>
+    </nav>
+    <div class="search-bar">
+      <input type="text" id="buscaInput" placeholder="Buscar produtos...">
+      <button id="btnBuscar">Search</button>
+    </div>
+    <button id="btnCarrinho" class="carrinho-btn">
+      Carrinho
+      <span id="carrinhoBadge">0</span>
+    </button>
+  </header>
+
+  <section id="home" class="hero-section">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./img/Carrosel-1.avif" alt="Adidas Background 1" class="hero-img">
+      </div>
+      <div class="carousel-item">
+        <img src="./img/Carrosel-2.avif" alt="Adidas Background 2" class="hero-img">
+      </div>
+      <div class="carousel-item">
+        <img src="./img/Carrosel-3.avif" alt="Adidas Background 3" class="hero-img">
+      </div>
+      <div class="carousel-item">
+        <img src="./img/Carrosel-4.jpg" alt="Adidas Background 4" class="hero-img">
+      </div>
+    </div>
+    <div class="hero-content">
+      <h1>IMPOSSÍVEL É NADA.</h1>
+      <p>Vista-se com atitude e tecnologia. Encontre o seu novo estilo hoje.</p>
+    </div>
+  </section>
+
+  <section id="produtos-section" class="produtos-section hidden-section">
+    <h2>Produtos em destaque</h2>
+
+    <div class="filters-container">
+      <div class="filter-group">
+        <label for="tipoFilter">Tipo:</label>
+        <select id="tipoFilter">
+          <option value="todos">Todos</option>
+          <option value="calca">Calça</option>
+          <option value="camisa">Camisa</option>
+          <option value="jaqueta">Jaqueta</option>
+          <option value="tenis">Tênis</option>
+          <option value="top">Top</option>
+        </select>
+      </div>
+
+      <div class="filter-group">
+        <label for="categoriaFilter">Categoria:</label>
+        <select id="categoriaFilter">
+          <option value="todos">Todos</option>
+          <option value="training">Training</option>
+          <option value="casual">Casual</option>
+          <option value="running">Running</option>
+          <option value="hitt">HIIT</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="produtos-grid">
+
+      <div class="produto-card" data-id="1" data-nome="Calça Designed For Training Warm-Up Roxo" data-preco="199.99" data-tipo="calca" data-categoria="training">
+        <div class="media-container">
+          <img src="./img/Calca_Designed_For_Training_Warm-Up_Roxo.avif" alt="Calça Training Roxo" class="produto-img">
+          <video class="produto-video" muted loop>
+            <source src="./video/Calca_Designed_For_Training_Warm-Up_Roxo.webm" type="video/webm">
+          </video>
+        </div>
+        <h3>Calça Designed For Training Roxo</h3>
+        <p>R$ 199,99</p>
+        <div class="produto-buttons">
+          <button class="btn-add">Adicionar</button>
+          <button class="btn-detalhes">Detalhes</button>
+        </div>
+      </div>
+
+      <div class="produto-card" data-id="2" data-nome="Camisa Adidas Clássica" data-preco="199.99" data-tipo="camisa" data-categoria="casual">
+        <div class="media-container">
+          <img src="./img/Camisa_adidas_classica.avif" alt="Camisa Adidas" class="produto-img">
+          <video class="produto-video" muted loop>
+            <source src="./video/Camisa_adidas_classica.webm" type="video/webm">
+          </video>
+        </div>
+        <h3>Camisa Adidas Clássica</h3>
+        <p>R$ 199,99</p>
+        <div class="produto-buttons">
+          <button class="btn-add">Adicionar</button>
+          <button class="btn-detalhes">Detalhes</button>
+        </div>
+      </div>
+
+      <div class="produto-card" data-id="3" data-nome="Jaqueta Capuz New Adidas" data-preco="249.99" data-tipo="jaqueta" data-categoria="casual">
+        <div class="media-container">
+          <img src="./img/Jaqueta_Capuz_New_adidas.avif" alt="Jaqueta Adidas" class="produto-img">
+          <video class="produto-video" muted loop>
+            <source src="./video/Jaqueta_Capuz_New_adidas.webm" type="video/webm">
+          </video>
+        </div>
+        <h3>Jaqueta Capuz New Adidas</h3>
+        <p>R$ 249,99</p>
+        <div class="produto-buttons">
+          <button class="btn-add">Adicionar</button>
+          <button class="btn-detalhes">Detalhes</button>
+        </div>
+      </div>
+
+      <div class="produto-card" data-id="4" data-nome="Tênis Adizero Adios Pro 4 Rosa" data-preco="399.99" data-tipo="tenis" data-categoria="running">
+        <div class="media-container">
+          <img src="./img/Tenis_Adizero_Adios_Pro_4_Rosa.avif" alt="Tênis Adizero" class="produto-img">
+          <video class="produto-video" muted loop>
+            <source src="./video/Tenis_Adizero_Adios_Pro_4_Rosa.webm" type="video/webm">
+          </video>
+        </div>
+        <h3>Tênis Adizero Adios Pro 4 Rosa</h3>
+        <p>R$ 399,99</p>
+        <div class="produto-buttons">
+          <button class="btn-add">Adicionar</button>
+          <button class="btn-detalhes">Detalhes</button>
+        </div>
+      </div>
+
+      <div class="produto-card" data-id="5" data-nome="Tênis Barricade 13 Branco" data-preco="349.99" data-tipo="tenis" data-categoria="casual">
+        <div class="media-container">
+          <img src="./img/Tenis_Barricade_13_Branco.avif" alt="Tênis Barricade" class="produto-img">
+          <video class="produto-video" muted loop>
+            <source src="./video/Tenis_Barricade_13_Branco.webm" type="video/webm">
+          </video>
+        </div>
+        <h3>Tênis Barricade 13 Branco</h3>
+        <p>R$ 349,99</p>
+        <div class="produto-buttons">
+          <button class="btn-add">Adicionar</button>
+          <button class="btn-detalhes">Detalhes</button>
+        </div>
+      </div>
+
+      <div class="produto-card" data-id="6" data-nome="Tênis Rapidmove ADV 2 HIIT Training Rox" data-preco="299.99" data-tipo="tenis" data-categoria="hitt">
+        <div class="media-container">
+          <img src="./img/Tenis_Rapidmove_ADV_2_HIIT_Training_Rox.avif" alt="Tênis Rapidmove" class="produto-img">
+          <video class="produto-video" muted loop>
+            <source src="./video/Tenis_Rapidmove_ADV_2_HIIT_Training_Rox.webm" type="video/webm">
+          </video>
+        </div>
+        <h3>Tênis Rapidmove ADV 2 Rox</h3>
+        <p>R$ 299,99</p>
+        <div class="produto-buttons">
+          <button class="btn-add">Adicionar</button>
+          <button class="btn-detalhes">Detalhes</button>
+        </div>
+      </div>
+
+      <div class="produto-card" data-id="7" data-nome="Top Power Light Tank Roxo" data-preco="129.99" data-tipo="top" data-categoria="training">
+        <div class="media-container">
+          <img src="./img/Top_esportivo_de_suporte_Power_Light_Tank_Roxo.avif" alt="Top Power Light"
+            class="produto-img">
+          <video class="produto-video" muted loop>
+            <source src="./video/Top_esportivo_de_suporte_Power_Light_Tank_Roxo.webm" type="video/webm">
+          </video>
+        </div>
+        <h3>Top Power Light Tank Roxo</h3>
+        <p>R$ 129,99</p>
+        <div class="produto-buttons">
+          <button class="btn-add">Adicionar</button>
+          <button class="btn-detalhes">Detalhes</button>
+        </div>
+      </div>
+
+      <div class="produto-card" data-id="8" data-nome="Top Treino Alto Suporte TLRD Impact Preto" data-preco="149.99" data-tipo="top" data-categoria="training">
+        <div class="media-container">
+          <img src="./img/Top_Treino_Alto_Suporte_TLRD_Impact_Preto.avif" alt="Top Treino TLRD" class="produto-img">
+          <video class="produto-video" muted loop>
+            <source src="./video/Top_Treino_Alto_Suporte_TLRD_Impact_Preto.webm" type="video/webm">
+          </video>
+        </div>
+        <h3>Top Treino Alto Suporte Preto</h3>
+        <p>R$ 149,99</p>
+        <div class="produto-buttons">
+          <button class="btn-add">Adicionar</button>
+          <button class="btn-detalhes">Detalhes</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div id="carrinhoModal" class="modal hidden">
+    <div class="modal-content">
+      <span id="fecharCarrinho" class="fechar">&times;</span>
+      <h2>Seu Carrinho</h2>
+      <div id="itensCarrinho"></div>
+      <div class="total">Total: R$ <span id="carrinhoTotal">0.00</span></div>
+
+      <div class="endereco-box hidden">
+        <h3>Informe seu CEP e número para frete:</h3>
+        <form id="cepForm">
+          <div class="cep-form-inputs">
+            <input type="text" id="cepInput" placeholder="Digite seu CEP" maxlength="9">
+            <span id="cepError" class="error-msg"></span>
+          </div>
+          <div id="numeroGroup" class="hidden">
+            <input type="text" id="numeroInput" placeholder="Número">
+            <span id="numeroError" class="error-msg hidden">Por favor, informe o número da sua residência.</span>
+          </div>
+          <button type="submit" class="btn-buscar-cep">Calcular Frete</button>
+        </form>
+        <div id="enderecoInfo" class="hidden">
+          <p><strong>Logradouro:</strong> <span id="logradouro"></span></p>
+          <p><strong>Bairro:</strong> <span id="bairro"></span></p>
+          <p><strong>Cidade / UF:</strong> <span id="cidade"></span> / <span id="uf"></span></p>
+        </div>
+        <div class="frete-info hidden">
+          <p><strong>Frete:</strong> R$ <span id="valorFrete">0.00</span></p>
+          <p><strong>Total com Frete:</strong> R$ <span id="totalComFrete">0.00</span></p>
+        </div>
+        <button class="btn-finalizar">Finalizar Compra</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="detalhesModal" class="modal hidden">
+    <div class="modal-content detalhes-content">
+      <span id="fecharDetalhes" class="fechar">&times;</span>
+      <img id="detalhesImg" src="" alt="Imagem do Produto" class="detalhes-img">
+      <h2 id="detalhesNome"></h2>
+      <p id="detalhesPreco"></p>
+      <p id="detalhesDescricao"></p>
+    <div class="detalhes-buttons">
+      <button id="btnAdicionarDetalhes" class="btn-add">Adicionar ao Carrinho</button>
+      <button id="btnFecharDetalhes" class="btn-finalizar">Fechar</button>
+    </div>
+  </div>
+</div>
+
+  <div id="pedidoConcluidoModal" class="modal hidden">
+    <div class="modal-content pedido-concluido-content">
+      <img src="./img/pedido-concluido.png" alt="Pedido Concluído" class="concluido-gif">
+      <h2>Pedido Concluido!</h2>
+      <p>Obrigado por sua compra. Seu pedido foi processado com sucesso e será enviado em breve!</p>
+      <button id="fecharPedidoConcluido" class="btn-finalizar">Fechar</button>
+    </div>
+  </div>
+
+  <div id="notificacao" class="notificacao hidden">
+    Produto adicionado no carrinho!
+  </div>
+
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="footer-col">
+        <h3>Sobre Nós</h3>
+        <p>
+          Na <strong>Adidas Store</strong> oferecemos roupas modernas e confortáveis,
+          sempre com qualidade e preço justo. Vista-se com estilo!
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Contato</h3>
+        <p>Email: adidasstore@gmail.com</p>
+        <p>WhatsApp: (11) 99999-9999</p>
+        <p>Endereço: Rua da Nobrega, 123 - São Paulo/SP</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Siga-nos</h3>
+        <ul>
+          <li><a href="https://www.instagram.com" target="_blank">Instagram</a></li>
+          <li><a href="https://www.facebook.com" target="_blank">Facebook</a></li>
+          <li><a href="https://www.tiktok.com" target="_blank">TikTok</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="copyright">
+      <p>&copy; 2025 Adidas Store - Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
